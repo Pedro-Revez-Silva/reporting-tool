@@ -15,3 +15,5 @@ For Windows, follow the instructions on this URL:
 ### Run the application
 
 #### `cargo run`
+
+Change/Add your email to the source code to receive the test.

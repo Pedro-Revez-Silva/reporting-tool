@@ -29,7 +29,7 @@ fn send_email() {
     subject.push_str(&timestamp_str);
 
     let email = Email::builder()
-        .to("pedro@jibble.io")
+        .to("pedro@jibble.io") //Replace this with your email
         .from("jibble.reporting.tool@gmail.com")
         .subject(subject)
         .html("<h1>Automated Tests Report</h1>")
