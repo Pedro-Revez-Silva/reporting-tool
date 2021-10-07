@@ -24,13 +24,13 @@ fn main() {
 fn send_email() {
     let now = Utc::now();
     let timestamp_str = now.format("%Y-%m-%d %H:%M:%S").to_string();
-    let mut subject: String = "Jibble Test Report: ".to_owned();
+    let mut subject: String = "Test Report: ".to_owned();
 
     subject.push_str(&timestamp_str);
 
     let email = Email::builder()
-        .to("pedro@jibble.io") //Replace this with your email
-        .from("jibble.reporting.tool@gmail.com")
+        .to("example@example.org") //Replace this with your email
+        .from("example@example.org")
         .subject(subject)
         .html("<h1>Automated Tests Report</h1>")
         .text("You received the report from tests ran at the time indicated on the subject. Check the attached files for more details")
@@ -38,10 +38,10 @@ fn send_email() {
         .unwrap()
         .build()
         .unwrap();
-
+    //Replace these with your credentials
     let creds = Credentials::new(
-        "jibble.reporting.tool@gmail.com".to_string(),
-        "Speed Baby1.".to_string(),
+        "example@example.org".to_string(),
+        "password".to_string(),
     );
 
     // Open connection to gmail
